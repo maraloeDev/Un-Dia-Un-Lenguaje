@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-             Console.WriteLine("Bienvenidos al repositorio un día, un lenguaje. Hola C#!!!");
+            Console.WriteLine("Bienvenidos al repositorio un día, un lenguaje. Hola C#!!!");
 
             // Variables
 
@@ -17,7 +17,7 @@
             //Operadores aritmeticos
             Console.WriteLine(7 * 5);
             Console.WriteLine(5.0 / 2.0);
-           Console.WriteLine(9 % 4);
+            Console.WriteLine(9 % 4);
 
             //Concatenacion
             int edadConcat = 23;
@@ -33,11 +33,11 @@
             int edadPersona3;
             int edadPersona4;
 
-             edadPersona1 = edadPersona2 = edadPersona3 = edadPersona4 = 27; //Lo que hace esto es que a todas las variables, su valor el 27
+            edadPersona1 = edadPersona2 = edadPersona3 = edadPersona4 = 27; //Lo que hace esto es que a todas las variables, su valor el 27
 
             edadPersona2 = 21;
 
-            var edadPersona=23; //Se utiliza esto pasa ASIGNAR EN TIEMPO DE EJECUCION el tipo (int), no se le puede dar otro tipo de valor
+            var edadPersona = 23; //Se utiliza esto pasa ASIGNAR EN TIEMPO DE EJECUCION el tipo (int), no se le puede dar otro tipo de valor
             Console.WriteLine(edadPersona);
 
             //Conversion Explicita (casting)
@@ -49,13 +49,13 @@
 
 
             //Conversion Implicita Se hace entre tipo compatibles
-                int habitantesCiudad = 1000000;
-                long habitantesCiudad2023 = habitantesCiudad;
-                Console.WriteLine(habitantesCiudad2023);
+            int habitantesCiudad = 1000000;
+            long habitantesCiudad2023 = habitantesCiudad;
+            Console.WriteLine(habitantesCiudad2023);
 
-                float pesoMaterial = 5.78F;
-                double pesoMaterialPrec = pesoMaterial;
-                Console.WriteLine(pesoMaterialPrec);
+            float pesoMaterial = 5.78F;
+            double pesoMaterialPrec = pesoMaterial;
+            Console.WriteLine(pesoMaterialPrec);
 
             //Lecturas desde teclado
             Console.WriteLine("Introduce un numero");
