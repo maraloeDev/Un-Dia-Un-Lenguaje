@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marti\\Documents\\GitHub\\Un-Dia-Un-Lenguaje\\01- C#\\05- POO\\05- POO.csproj": {}
+    "C:\\Users\\marti\\Documents\\GitHub\\Un-Dia-Un-Lenguaje\\01- C#\\07- Herencia\\07- Herencia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marti\\Documents\\GitHub\\Un-Dia-Un-Lenguaje\\01- C#\\05- POO\\05- POO.csproj": {
+    "C:\\Users\\marti\\Documents\\GitHub\\Un-Dia-Un-Lenguaje\\01- C#\\07- Herencia\\07- Herencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marti\\Documents\\GitHub\\Un-Dia-Un-Lenguaje\\01- C#\\05- POO\\05- POO.csproj",
-        "projectName": "05- POO",
-        "projectPath": "C:\\Users\\marti\\Documents\\GitHub\\Un-Dia-Un-Lenguaje\\01- C#\\05- POO\\05- POO.csproj",
+        "projectUniqueName": "C:\\Users\\marti\\Documents\\GitHub\\Un-Dia-Un-Lenguaje\\01- C#\\07- Herencia\\07- Herencia.csproj",
+        "projectName": "07- Herencia",
+        "projectPath": "C:\\Users\\marti\\Documents\\GitHub\\Un-Dia-Un-Lenguaje\\01- C#\\07- Herencia\\07- Herencia.csproj",
         "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marti\\Documents\\GitHub\\Un-Dia-Un-Lenguaje\\01- C#\\05- POO\\obj\\",
+        "outputPath": "C:\\Users\\marti\\Documents\\GitHub\\Un-Dia-Un-Lenguaje\\01- C#\\07- Herencia\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

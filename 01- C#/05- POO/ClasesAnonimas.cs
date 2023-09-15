@@ -1,6 +1,6 @@
 ﻿namespace _05__POO_ClasesAnonimas
 {
-    internal class Program
+    internal class ClasesAnonimas
     {
         static void Main(string[] args)
         {
