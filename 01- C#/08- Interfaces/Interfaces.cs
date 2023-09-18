@@ -1,46 +1,79 @@
 ﻿namespace _08__Interfaces
 {
-    internal class Herencia //LA HERENCIA SE REPRESENTA CON LOS DOS PUNTOS  (" : ") (Un Caballo ('es' = :) un Mamifero 
+    internal class Interfaces
     {
-        static void Main(string[] args)
-        {
+        //static void Main(string[] args)
+        //{
 
-            Caballo caballo = new Caballo("Caballo");
+        //    Caballo caballo = new Caballo("Caballo");
 
-            Humano humano = new Humano("Eduardo");
+        //    ISaltoConPatas mamiferosTerrestres = caballo; // Para indicarle el numero de patas, aplicamos el principio de sustitucion (es un...)
 
-            Gorila gorila = new Gorila("Gorila");
+        //    Humano humano = new Humano("Eduardo");
 
-            caballo.getNombre();
+        //    Gorila gorila = new Gorila("Gorila");
 
-            humano.getNombre();
+        //    Ballena ballena = new Ballena("Ballena");
 
-            gorila.getNombre();
+        //    caballo.getNombre();
 
-            // El principio de sustitución (Es siempre un...) consiste en sustituir un objeto de un tipo por otro diferente teniendo en cuenta la HERENCIA
+        //    humano.getNombre();
 
-            Mamiferos persona = new Humano("Paco");
+        //    gorila.getNombre();
 
-            persona.pensar(); // No me deja por que persona no es de tipo humano, si no de Mamifero
+        //    ballena.getNombre();
 
-            Mamiferos[] almacenAnimales = new Mamiferos[3];
+        //    Mamiferos persona = new Humano("Paco");
 
-            almacenAnimales[0] = caballo;
-            almacenAnimales[1] = humano;
-            almacenAnimales[2] = gorila;
+        //    persona.pensar();
 
-            for (int i = 0; i < 3; i++)
-            {
-                almacenAnimales[i].pensar();
-            }
+        //    Mamiferos[] almacenAnimales = new Mamiferos[3];
+
+        //    almacenAnimales[0] = caballo;
+        //    almacenAnimales[1] = humano;
+        //    almacenAnimales[2] = gorila;
+
+        //    for (int i = 0; i < 3; i++)
+        //    {
+        //        almacenAnimales[i].pensar();
+        //    }
+
+        //    Console.WriteLine("Numero de patas utilizadas en el salto de  de  caballo:  " + mamiferosTerrestres.numeroPatas());
 
 
-        }
+        //}
     }
 
-    // IMPLEMENTAR INTERFAZ
+    // Una interfaz es un conjunto de regras que tienen que cumplir las clases, se pueden implementar tantas interfaces como se necesiten
 
-    //CREAR BALLENA
+    interface IMamiferosTerrestres
+    {
+
+        public int numeroPatas();
+
+    }
+
+    interface IAnimlesyDeportes
+    {
+
+        public bool esOlimpico();
+        public string tipoDeporte();
+
+    }
+
+    interface ISaltar
+    {
+        public string saltar();
+    }
+
+    interface ISaltoConPatas
+    {
+
+        public int numeroPatas();
+
+    }
+
+
 
     class Mamiferos
     {
@@ -60,28 +93,73 @@
 
         public void getNombre() => Console.WriteLine($"El nombre del ser vivo es {nombreSerVivo}");
 
-        public virtual void pensar() => Console.WriteLine("Pensamiento basico instintivo"); //Virtual es que todas las subclases de la clase padre, tienen que tener un metodo pensar
+        public virtual void pensar() => Console.WriteLine("Pensamiento basico instintivo");
     }
 
-    class Caballo : Mamiferos
+
+    class Caballo : Mamiferos, IMamiferosTerrestres, IAnimlesyDeportes, ISaltar, ISaltoConPatas
+
+        // Si dos interfaces tienen el mismo metodo, se llama a la interfaz dentro del metodo
     {
 
-        public Caballo(string nombreCaballo) : base(nombreCaballo) // Para heredar el constructor, se utiliza ( :base ())
+        public Caballo(string nombreCaballo) : base(nombreCaballo)
         {
 
         }
         public void galopar() => Console.WriteLine("Soy capaz de galopar");
 
+
         public override void pensar() => Console.WriteLine("Soy capaz de pensar poco");
+
+        int IMamiferosTerrestres.numeroPatas()
+        {
+            return 4;
+
+        }
+        int ISaltoConPatas.numeroPatas()
+        {
+            return 2;
+        }
+
+        public string tipoDeporte()
+        {
+            return "El tipo de deporte del caballo es la Carrera de caballos";
+        }
+
+        public bool esOlimpico()
+        {
+            return true;
+        }
+
+        public string saltar()
+        {
+            return "Se Saltar";
+        }
     }
-    class Humano : Mamiferos
+    class Humano : Mamiferos, IMamiferosTerrestres, IAnimlesyDeportes
     {
 
         public Humano(string nombreHumano) : base(nombreHumano)
         {
 
         }
+
+        public int numeroPatas()
+        {
+            return 2;
+        }
+
         public override void pensar() => Console.WriteLine("Soy capaz de pensar ¿?");
+
+        public string tipoDeporte()
+        {
+            return "El deporte que practico es el Golf";
+        }
+
+        public bool esOlimpico()
+        {
+            return false;
+        }
     }
     class Gorila : Mamiferos
     {
@@ -93,5 +171,19 @@
         public void trepar() => Console.WriteLine("Soy capaz de trepar");
 
         public override void pensar() => Console.WriteLine("Soy capaz de pensar de forma avanzada");
+    }
+    class Ballena : Mamiferos
+    {
+        public Ballena(string nombreBallena) : base(nombreBallena)
+        {
+
+        }
+
+        public void nadar()
+        {
+            Console.WriteLine("Soy capaz de nadar");
+        }
+
+
     }
 }
